@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+
+import django
+import django_heroku
+import dj_database_url
+from decouple import config
 from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(find_dotenv())
@@ -57,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'StudentRegistration.urls'
@@ -134,6 +140,9 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
@@ -145,3 +154,6 @@ def FILTERS_VERBOSE_LOOKUPS():
         'icontains': '',
     })
     return verbose_lookups
+
+
+django_heroku.settings(locals())
