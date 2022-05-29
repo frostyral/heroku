@@ -73,5 +73,3 @@ class StudentApplication(admin.ModelAdmin):
             'fields': ('enrolment_status',)
         }),
     )
-
-
