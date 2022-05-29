@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'StudentRegistration.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'remote cleardb mysql',
+        'NAME': 'heroku_d15eb379552bd24',
         'USER': 'b80fb1c2639448',
         'PASSWORD': '4bdada1f',
         'HOST': 'us-cdbr-east-05.cleardb.net',
