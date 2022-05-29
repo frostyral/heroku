@@ -92,10 +92,10 @@ WSGI_APPLICATION = 'StudentRegistration.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': DB_NAME,
-        'USER': DB_USERNAME,
-        'PASSWORD': DB_PASSWORD,
-        'HOST': 'localhost',
+        'NAME': 'remote cleardb mysql',
+        'USER': 'b80fb1c2639448',
+        'PASSWORD': '4bdada1f',
+        'HOST': 'us-cdbr-east-05.cleardb.net',
         'PORT': '3306',
     }
 }
