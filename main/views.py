@@ -18,7 +18,7 @@ def register(request):
         if form.is_valid():
             print('yes')
             form.save()
-            return redirect('stsmhome')
+            return redirect('stsm-home')
         else:
             print(form.errors.as_data())
             form = StudentForm(request.POST)
