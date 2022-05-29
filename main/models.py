@@ -75,7 +75,7 @@ class StudentList(models.Model):
     uni_college = models.CharField(
         max_length=50, verbose_name='Previous College', null=True, blank=True, validators=[validate_names])
     uni_course = models.CharField(max_length=50, verbose_name='Previous Program',
-                                  null=True, blank=True, validators=[validate_names])
+                                  null=True, blank=True)
     uni_year = models.PositiveIntegerField(validators=[MaxValueValidator(
         5), MinValueValidator(1)], verbose_name='Previous Year', null=True, blank=True)
     uni_reason = models.TextField(
